@@ -48,11 +48,16 @@ public class ScannerReadCSVFile
             // Write your code in the space below!
             
             Scanner s = new Scanner(line).useDelimiter(",");
+            int classes = -1;
+            int total = 0;
+            String clas = s.next();
             while (s.hasNext()){
                 int  token = s.nextInt();
-                int average = token + token
-                System.out.println(token);
+                token = token + total;
+                classes++;
             }
+            int average = total/classes;
+            System.out.println(clas + ":" + average);
         }
     }
 
